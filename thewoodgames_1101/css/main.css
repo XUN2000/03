@@ -61,7 +61,7 @@ ul {
     font-size: 28px;
     margin-right: -4px;
 }
-.main>nav>ul>li>.nav_item{
+.main>nav>ul>li>.nav_item a{
   color: #000;
   text-decoration: none;
   display: block;
@@ -101,6 +101,57 @@ ul {
 .en{
     color: rgb(169, 230, 29);
 }
+
+/* shop.html的css */
+.main>.shop_content>.p_content{
+      color: #585958;
+      line-height: 20px;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+      font-weight: bolder;
+}
+.main>.shop_content>.item_wrap{
+    border: 1px solid #898000;
+}
+.main>.shop_content>.item_wrap>.item_row{
+  display: flex
+}
+.main>.shop_content>.item_wrap>.item_row>div{
+  flex: 1;
+}
+
+
+.main>.shop_content>.item_wrap>.item_row>.item_right .item_title{
+font-weight: bold;
+border-bottom: 1px solid #898000;
+padding-bottom: 3px;
+}
+.shop_content>.item_wrap>.item_row>.item_right .item_child{
+  display: flex;
+  margin-top: 10px;
+}
+.price_txt{
+  color: 898000;
+  font-size: 17px;
+  margin-bottom: 13px;
+}
+.game_txt{
+  line-height: 19px;
+  font-size: 15px;
+}
+.buy_btn{
+  margin-left: 30px;
+  text-decoration: none;
+  background-color: #827800;
+  color: #fff;
+  padding: 7px;
+  padding-top: 10px;
+  display: block;
+  border-radius: 14px;
+
+}
+
+
 
 @media(max-width:992px){
   .main>nav>ul{
