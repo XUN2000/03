@@ -58,7 +58,8 @@ ul {
     height: 70px;
     line-height: 70px;
     text-align: center;
-    font-size: 28p;
+    font-size: 28px;
+    margin-right: -4px;
 }
 .main>nav>ul>li>.nav_item{
   color: #000;
@@ -100,7 +101,11 @@ ul {
 .en{
     color: rgb(169, 230, 29);
 }
+
 @media(max-width:992px){
+  .main>nav>ul{
+    flex-direction: column;
+  }
   .main>nav>ul>li{
     width:100%
   }
