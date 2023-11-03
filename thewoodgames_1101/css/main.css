@@ -1,74 +1,80 @@
 html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  /* body{
-    font-size: 30px;
-  } */
-.main{
-    /* width: 100%; */
-    max-width: 980px;
-    margin: 0 auto;
-    /* padding: 0 15px; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-  /* .main .logo{
-    width: 150px;
-  }  */
-  .main>header{
-    text-align: center;
-    /* width: 800px;
-    margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 20px; */
-    
-  }
-  .main>header>img.logo{
-    width: 150px;
-    /* display: block;
-    margin: 0 auto; */
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
+.main{
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* background-color: brown; */
+}
+.main>header{
+  text-align: center;
+  /* padding-top: 40px;
+  padding-bottom: 20px; */
+}
+.main>header img.logo{
+  width: 150px;
+  /* display: block;
+  margin: 0 auto; */
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 .main>nav{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-bottom: 20px;
+  border-top: 1px solid #898000;
+  border-bottom: 1px solid #898000;
+  margin-bottom: 20px;
+  /* background-color: red; */
 }
 .main>nav>ul{
   display: flex;
 }
 .main>nav>ul>li{
-    /* display: inline-block; */
-    flex: 1;
-    width: 33%;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    font-size: 28px;
-    margin-right: -4px;
+  /* background-color: red; */
+
+  /* 
+  這是 display inline-block 的排版方式 
+  */
+  /* display: inline-block;
+  width: 33.333333%;
+  margin-right: -4px; */
+
+  /* 
+  這是 display flex 的排版方式 
+  */
+  flex:1;
+
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
 }
-.main>nav>ul>li>.nav_item a{
-  color: #000;
+.main>nav>ul>li>.nav_item{
   text-decoration: none;
+  color: #000;
   display: block;
   position: relative;
-  /* width: 100%; */
+  width: 100%;
 }
 .main>nav>ul>li>.nav_item>.nav_child{
+  /* background-color: red; */
   display: none;
   position: absolute;
   width: 100%;
@@ -88,78 +94,172 @@ ul {
 }
 
 .main>nav>ul>li>.nav_item:hover{
-  background-color: #dcdddd;
+  background-color: #DCDDDD;
 }
+
 .main>nav>ul>li>.nav_item:hover .nav_child{
   display: block;
 }
 
-
-.content img{
+.main>.content img{
   width: 100%;
 }
-.en{
-    color: rgb(169, 230, 29);
+
+.en_text{
+  color: #898000;
 }
 
-/* shop.html的css */
-.main>.shop_content>.p_content{
-      color: #585958;
-      line-height: 20px;
-      letter-spacing: 1.5px;
-      font-size: 15px;
-      font-weight: bolder;
+
+/* shop.html 的 css */
+.shop_content>.p_content{
+  color: #58595B;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  font-weight: bold;
 }
-.main>.shop_content>.item_wrap{
-    border: 1px solid #898000;
+.shop_content>.item_wrap{
+  border: 1px solid #898000;
+  font-weight: bold;
 }
-.main>.shop_content>.item_wrap>.item_row{
-  display: flex
+.shop_content>.item_wrap>.item_row{
+  display: flex;
+  padding: 15px;
+  gap: 15px;
+  border-bottom: 1px solid #898000; 
 }
-.main>.shop_content>.item_wrap>.item_row>div{
+.shop_content>.item_wrap>.item_row:last-child{
+  border-bottom: none;
+}
+/* .shop_content>.item_wrap>.item_row>div{
   flex: 1;
+} */
+.shop_content>.item_wrap>.item_row>.item_left{
+  /* width: 20%; */
+  flex-basis: 20%;
+}
+.product_img{
+  width: 100%;
+}
+.shop_content>.item_wrap>.item_row>.item_mid{
+  /* width: 40%; */
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: space-between; */
+
+  /* position: relative; */
+}
+.price{
+  /* 
+  position: absolute;
+  bottom: 0; 
+  */
+  color: #898000;
+}
+.item_mid > h2{
+  margin: 0;
+  font-size: 22px;
+  line-height: 25px;
+
+  margin-bottom: auto;
+}
+.shop_content>.item_wrap>.item_row>.item_right{
+  /* width: 40%; */
+  flex-basis: 40%;
 }
 
-
-.main>.shop_content>.item_wrap>.item_row>.item_right .item_title{
-font-weight: bold;
-border-bottom: 1px solid #898000;
-padding-bottom: 3px;
+.shop_content>.item_wrap>.item_row>.item_right .item_title{
+  border-bottom: 1px solid #898000;
+  padding-bottom: 3px;
 }
 .shop_content>.item_wrap>.item_row>.item_right .item_child{
   display: flex;
   margin-top: 10px;
 }
+.item_child>.item_child_left{
+  margin-right: auto;
+}
+.item_child>.item_child_right{
+  padding-top: 5px;
+}
 .price_txt{
-  color: 898000;
+  color: #898000;
   font-size: 17px;
-  margin-bottom: 13px;
+  margin-bottom: 8px;
 }
 .game_txt{
   line-height: 19px;
   font-size: 15px;
 }
 .buy_btn{
-  margin-left: 30px;
   text-decoration: none;
-  background-color: #827800;
+  background: #827B00;
   color: #fff;
   padding: 7px;
-  padding-top: 10px;
-  display: block;
   border-radius: 14px;
-
 }
+/* .buy_btn{
+  width: 82px;
+  height: 32px;
+  line-height: 32px;
+  background-color: #8A8000;
+  border-radius: 14px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+  display: block;
+  text-decoration: none;
+} */
 
 
+.buy_btn:hover{
+  background: #000;
+}
+footer{
+  background-color: #898000;
+  margin-top: 50px;
+}
+/* flex解決方案 */
+
+footer>.main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: fff;
+  /* padding-top: 30px; */
+}
+footer>.main>ul{
+  display: flex;
+  margin-right: auto;
+  gap: 15px;
+}
+footer>.main>ul>li>a{
+text-decoration: none;
+color: #fff;
+}
+footer>.main>ul>li>a:hover{
+  border-bottom: 1px solid #fff;
+}
 
 @media(max-width:992px){
   .main>nav>ul{
-    flex-direction: column;
+      flex-direction: column;
   }
   .main>nav>ul>li{
-    width:100%
+      width: 100%;
   }
+  .shop_content>.item_wrap>.item_row{
+      flex-direction: column;
+  }
+  /* .shop_content>.item_wrap>.item_row>.item_left{
+      width: 100%;
+  }
+  .shop_content>.item_wrap>.item_row>.item_mid{
+      width: 100%;
+  }
+  .shop_content>.item_wrap>.item_row>.item_right{
+      width: 100%;
+  } */
 }
-
-  
